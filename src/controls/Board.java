@@ -9,9 +9,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class Board extends JComponent implements KeyListener {
-
-  static int testBoxX;
-  static int testBoxY;
+  private static int testBoxX;
+  private static int testBoxY;
   static Hero hero;
   static Map map;
 
@@ -24,15 +23,6 @@ public class Board extends JComponent implements KeyListener {
     hero = new Hero();
   }
 
-  public static void main(String[] args) {
-    JFrame frame = new JFrame("RPG Game");
-    Board board = new Board();
-    frame.add(board);
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.setVisible(true);
-    frame.pack();
-    frame.addKeyListener(board);
-  }
 
   @Override
   public void paint(Graphics g) {
